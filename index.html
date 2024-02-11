@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            height: 3rem;
+            width: 10rem;
+            background-color: black;
+            color: aliceblue;
+            border-radius: 20px;
+            border: none;
+            font-size: x-large;
+            position: relative;
+          
+            margin-top: 20px;
+            margin-left:75px ;
+        }
+        
+    </style>
+</head>
+<body>
+    
+        <img  src="bulb-off.png"  alt="bulb off" /> <br>
+    
+        <button onclick= "onOff()" >Turn On</button>
+    
+    <script>
+
+ function onOff (){
+        var image =  document.querySelector("img") ;
+         var btn = document.querySelector("button");
+
+        if (image.src === "bulb-off.png" ||
+         btn.innerText === "Turn On" ? bulbOn() : bulbOff());
+    
+    };
+    
+    function bulbOn(){
+          document.querySelector("img").src = "bulb-on.png";
+
+         var btn = document.querySelector("button");
+         btn.innerText = "Turn Off";
+       
+        };
+
+        function bulbOff(){
+          document.querySelector("img").src = "bulb-off.png";
+
+         var btn = document.querySelector("button");
+         btn.innerText = "Turn On";
+        };
+        
+    </script>
+</body>
+</html>
